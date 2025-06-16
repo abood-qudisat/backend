@@ -49,7 +49,7 @@ const AuthController = {
       const { email, password } = value;
 
       const user = await UserModel.findByEmail(email);
-      if (!user) throw new Error("Invalid Credantials");
+      if (!user) throw new Error("Invalid Credentials");
       if (!user.is_active) throw new Error("Account is deactivated");
 
       const isMatch = await UserModel.verifyPassword(

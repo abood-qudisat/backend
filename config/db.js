@@ -11,8 +11,6 @@ const pool = new Pool({
       ? { rejectUnauthorized: true }
       : false,
   max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
 });
 
 pool.connect().then(() => {
