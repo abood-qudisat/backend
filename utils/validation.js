@@ -72,7 +72,7 @@ export const courseUpdateSchema = Joi.object({
 // ENROLLMENT FINISHED
 export const enrollmentSchema = Joi.object({
   course_id: Joi.number().integer().required(),
-  course_id: Joi.number().integer().required(),
+  user_id: Joi.number().integer().required(),
   completed_at: Joi.date().optional().allow(null),
   progress: Joi.number().integer().min(0).max(100).optional(),
 });

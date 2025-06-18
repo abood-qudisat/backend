@@ -5,6 +5,9 @@ const EnrollmentController = {
   async enrollUser(req, res, next) {
     try {
       const { error, value } = enrollmentSchema.validate(req.body);
+      console.log('====================================');
+      console.log(value);
+      console.log('====================================');
       if (error)
         return res.status(400).json({ success: false, error: error.message });
 
